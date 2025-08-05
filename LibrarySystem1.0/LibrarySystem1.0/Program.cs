@@ -1,7 +1,13 @@
+using LibrarySystem1._0.Data; // LibraryDbContext‚ğg‚¤‚½‚ß‚ÌéŒ¾
+using Microsoft.EntityFrameworkCore; // AddDbContext‚ğg‚¤‚½‚ß‚ÌéŒ¾
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<LibraryDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
