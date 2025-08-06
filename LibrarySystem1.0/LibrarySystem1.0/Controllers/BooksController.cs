@@ -21,7 +21,7 @@ namespace LibrarySystem1._0.Controllers
         public async Task<IActionResult> Index()
         {
             // 保管しておいた_contextを使って、Booksテーブルのデータを全て非同期で取得する
-            var books = await _context.Books.ToListAsync();
+            var books = await _context.BookInfos.ToListAsync();
 
             // 取得したDBの書籍リストをビューに渡す
             return View(books);

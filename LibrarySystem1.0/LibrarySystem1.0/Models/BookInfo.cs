@@ -1,8 +1,8 @@
 ﻿namespace LibrarySystem1._0.Models // ←今実際に作っているプロジェクト名
 {
-    public class Book
+    public class BookInfo
     {
-        public int BookId { get; set; }
+        public int BookInfoId { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
     }

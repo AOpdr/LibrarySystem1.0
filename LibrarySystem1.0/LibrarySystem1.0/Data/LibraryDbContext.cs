@@ -10,5 +10,8 @@ public class LibraryDbContext : DbContext
     }
 
     // このDbContextが、Booksテーブルを扱うことを宣言する
-    public DbSet<Book> Books { get; set; }
+    public DbSet<BookInfo> BookInfos { get; set; }
+    //public DbSet<BookCopy> BookCopies { get; set; }
+    //public DbSet<User> Users { get; set; }
+    //public DbSet<LendingRecord> LendingRecords { get; set; }
 }
